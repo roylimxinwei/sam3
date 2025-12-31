@@ -1,0 +1,28 @@
+Search Term: begedil
+==================================================
+
+Name: Begedil
+Description: Deep-fried potato patty
+
+ADDITIONAL INFO:
+  Food Group: Vegetables
+  Food Subgroup: Starchy vegetable-based dishes
+  Edible Portion: 100%
+  Default Serving Size: 1 piece(s) = 45g
+  Alternative Serving Size(s): -
+  Source of Data: Lab Analysis
+
+NUTRITION (Per 100 g):
+  Energy (kcal): 250
+  Protein (g): 4.14
+  Total Fat (g): 18.03
+  Saturated Fat (g): 8.21
+  Trans Fat (g): -
+  Carbohydrate (g): 17.74
+  Sugar (g): 2.1
+  Added Sugar (g): -
+  Dietary Fibre (g): 1.84
+  Sodium (mg): 288
+  Potassium (mg): -
+  Calcium (mg): -
+  Iron (mg): -
