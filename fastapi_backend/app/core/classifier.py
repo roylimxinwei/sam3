@@ -13,7 +13,7 @@ from PIL import Image
 from app.config import settings
 from app.utils.exceptions import ModelNotLoadedError, ImageProcessingError
 from app.utils.image_processing import preprocess_image
-
+from app.utils.model_downloader import download_classifier_model
 
 class FoodClassifier:
     """
@@ -49,6 +49,16 @@ class FoodClassifier:
         """Get number of classes."""
         return len(self._labels) if self._labels else 0
     
+    def _get_model_path(self) -> Path:
+        """Get model path, downloading from HF if needed."""
+        if settings.model_path.exists():
+            return settings.model_path
+    
+        print("📥 Downloading model from Hugging Face...")
+        return download_classifier_model(
+            repo_id=settings.hf_classifier_repo,
+            filename=settings.hf_classifier_filename,
+        )
     def load_model(
         self, 
         model_path: Optional[Path] = None, 
@@ -64,7 +74,8 @@ class FoodClassifier:
         Returns:
             True if successful, False otherwise
         """
-        model_path = model_path or settings.model_path
+        # model_path = model_path or settings.model_path
+        model_path = model_path if (model_path and model_path.exists()) else self._get_model_path()
         labels_path = labels_path or settings.labels_path
         
         try:

@@ -34,6 +34,15 @@ class Settings(BaseSettings):
         "exp://localhost:19000",      # Expo development
         "http://10.0.2.2:8000",       # Android emulator
     ]
+
+    # ==========================================
+    # Hugging Face Model Settings
+    # ==========================================
+    hf_token: Optional[str] = None  # Set via HF_TOKEN env var
+    
+    # Food Classifier Model
+    hf_classifier_repo: str = "xinwei6969/sgfood233_convnext_base"
+    hf_classifier_filename: str = "sgfood233_convnext_base.onnx"
     
     # Supabase Configuration
     supabase_url: str = "https://miwbvvmcdgndbmwqtzzx.supabase.co"
