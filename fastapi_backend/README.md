@@ -1,8 +1,12 @@
-to start server type 
+to start server 
 ```
+cd backend/app
 fastapi dev main.py --host 0.0.0.0 --port 8000
 ```
-
+Start ngrok
+```
+ngrok http 8000 --region ap
+```
 # Food Classifier - Modular Architecture
 
 A modularized food classification application supporting both FastAPI (for React Native) and Gradio interfaces.
