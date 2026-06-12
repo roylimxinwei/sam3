@@ -152,3 +152,4 @@ Thumbs.db
 *.bpe
 *.vocab
 *.onnx
+/food_segmentation_project/foodseg_checkpoints/deeeplabv3plus_resnet101_10epochs/foodseg103_10epochs.onnx.data
